@@ -1,0 +1,772 @@
+{
+  "stage": "SPANDA Stage 3b - cluster profiling, validation and engineering interpretation",
+  "observation_unit": "building-day",
+  "n_observations": 11382,
+  "cluster_sizes": {
+    "0": 10502,
+    "1": 880
+  },
+  "cluster_percent": {
+    "0": 92.27,
+    "1": 7.73
+  },
+  "official_model": {
+    "K": 2,
+    "silhouette": 0.6624,
+    "inertia": 186615.6,
+    "pca_components": 3,
+    "pca_variance_retained": 0.9084952680315341,
+    "frozen": true
+  },
+  "building_composition": [
+    {
+      "meter": "Academic",
+      "total_days": 1561,
+      "cluster_0_n": 1560,
+      "cluster_1_n": 1,
+      "cluster_0_pct": 99.93593850096092,
+      "cluster_1_pct": 0.06406149903907751,
+      "cluster_0_composition_pct": 14.854313464102075,
+      "cluster_1_composition_pct": 0.11363636363636363,
+      "distribution_type": "building-specific (concentrated in one cluster)"
+    },
+    {
+      "meter": "Boys_UPS",
+      "total_days": 1167,
+      "cluster_0_n": 1167,
+      "cluster_1_n": 0,
+      "cluster_0_pct": 100.0,
+      "cluster_1_pct": 0.0,
+      "cluster_0_composition_pct": 11.11216911064559,
+      "cluster_1_composition_pct": 0.0,
+      "distribution_type": "building-specific (concentrated in one cluster)"
+    },
+    {
+      "meter": "Boys_mains",
+      "total_days": 1133,
+      "cluster_0_n": 1133,
+      "cluster_1_n": 0,
+      "cluster_0_pct": 100.0,
+      "cluster_1_pct": 0.0,
+      "cluster_0_composition_pct": 10.788421253094649,
+      "cluster_1_composition_pct": 0.0,
+      "distribution_type": "building-specific (concentrated in one cluster)"
+    },
+    {
+      "meter": "Facilities",
+      "total_days": 1412,
+      "cluster_0_n": 1410,
+      "cluster_1_n": 2,
+      "cluster_0_pct": 99.85835694050992,
+      "cluster_1_pct": 0.141643059490085,
+      "cluster_0_composition_pct": 13.426014092553798,
+      "cluster_1_composition_pct": 0.22727272727272727,
+      "distribution_type": "building-specific (concentrated in one cluster)"
+    },
+    {
+      "meter": "Girls_UPS",
+      "total_days": 1588,
+      "cluster_0_n": 1588,
+      "cluster_1_n": 0,
+      "cluster_0_pct": 100.0,
+      "cluster_1_pct": 0.0,
+      "cluster_0_composition_pct": 15.120929346791087,
+      "cluster_1_composition_pct": 0.0,
+      "distribution_type": "building-specific (concentrated in one cluster)"
+    },
+    {
+      "meter": "Girls_mains",
+      "total_days": 1108,
+      "cluster_0_n": 1108,
+      "cluster_1_n": 0,
+      "cluster_0_pct": 100.0,
+      "cluster_1_pct": 0.0,
+      "cluster_0_composition_pct": 10.550371357836601,
+      "cluster_1_composition_pct": 0.0,
+      "distribution_type": "building-specific (concentrated in one cluster)"
+    },
+    {
+      "meter": "Lecture",
+      "total_days": 871,
+      "cluster_0_n": 1,
+      "cluster_1_n": 870,
+      "cluster_0_pct": 0.1148105625717566,
+      "cluster_1_pct": 99.88518943742825,
+      "cluster_0_composition_pct": 0.009521995810321844,
+      "cluster_1_composition_pct": 98.86363636363636,
+      "distribution_type": "building-specific (concentrated in one cluster)"
+    },
+    {
+      "meter": "Library",
+      "total_days": 1172,
+      "cluster_0_n": 1165,
+      "cluster_1_n": 7,
+      "cluster_0_pct": 99.40273037542661,
+      "cluster_1_pct": 0.5972696245733788,
+      "cluster_0_composition_pct": 11.093125119024947,
+      "cluster_1_composition_pct": 0.7954545454545454,
+      "distribution_type": "building-specific (concentrated in one cluster)"
+    },
+    {
+      "meter": "Mess",
+      "total_days": 1370,
+      "cluster_0_n": 1370,
+      "cluster_1_n": 0,
+      "cluster_0_pct": 100.0,
+      "cluster_1_pct": 0.0,
+      "cluster_0_composition_pct": 13.045134260140925,
+      "cluster_1_composition_pct": 0.0,
+      "distribution_type": "building-specific (concentrated in one cluster)"
+    }
+  ],
+  "temporal_behaviour": {
+    "0": {
+      "n_observations": 10502,
+      "peak_hour_modal": 19,
+      "peak_hour_mean_power_kW": 16.573,
+      "daytime_mean_kW_06_22": 15.25,
+      "night_mean_kW_00_05": 13.122,
+      "day_night_ratio": 1.162,
+      "period_share_means": {
+        "morning (06-11)": 0.2259,
+        "afternoon (12-17)": 0.2581,
+        "evening (18-23)": 0.277,
+        "night (00-05)": 0.239
+      },
+      "weekday_days": 7495,
+      "weekend_days": 3007,
+      "weekday_mean_daily_kW": 15.456,
+      "weekend_mean_daily_kW": 12.835,
+      "weekday_weekend_ratio": 1.204,
+      "weekday_hourly_profile_kW": [
+        14.496,
+        13.826,
+        13.163,
+        12.973,
+        12.946,
+        12.528,
+        11.57,
+        11.554,
+        13.976,
+        16.666,
+        17.355,
+        17.774,
+        18.0,
+        17.596,
+        17.508,
+        17.403,
+        17.141,
+        16.604,
+        16.542,
+        17.212,
+        16.729,
+        16.256,
+        15.806,
+        15.32
+      ],
+      "weekend_hourly_profile_kW": [
+        13.846,
+        13.312,
+        12.693,
+        12.307,
+        12.022,
+        11.571,
+        10.538,
+        9.854,
+        10.592,
+        11.766,
+        12.311,
+        12.661,
+        12.921,
+        12.889,
+        13.005,
+        12.969,
+        12.688,
+        12.833,
+        13.882,
+        14.98,
+        15.001,
+        14.853,
+        14.535,
+        14.017
+      ]
+    },
+    "1": {
+      "n_observations": 880,
+      "peak_hour_modal": 10,
+      "peak_hour_mean_power_kW": 3.024,
+      "daytime_mean_kW_06_22": 1.536,
+      "night_mean_kW_00_05": 0.259,
+      "day_night_ratio": 5.929,
+      "period_share_means": {
+        "morning (06-11)": 0.4477,
+        "afternoon (12-17)": 0.464,
+        "evening (18-23)": 0.0317,
+        "night (00-05)": 0.0566
+      },
+      "weekday_days": 724,
+      "weekend_days": 156,
+      "weekday_mean_daily_kW": 1.248,
+      "weekend_mean_daily_kW": 0.738,
+      "weekday_weekend_ratio": 1.691,
+      "weekday_hourly_profile_kW": [
+        0.049,
+        0.048,
+        0.134,
+        0.362,
+        0.473,
+        0.486,
+        0.686,
+        1.151,
+        2.242,
+        3.122,
+        3.364,
+        3.299,
+        3.11,
+        2.571,
+        2.476,
+        2.445,
+        2.055,
+        1.143,
+        0.284,
+        0.134,
+        0.096,
+        0.088,
+        0.079,
+        0.059
+      ],
+      "weekend_hourly_profile_kW": [
+        0.238,
+        0.203,
+        0.165,
+        0.271,
+        0.331,
+        0.357,
+        0.473,
+        0.575,
+        0.748,
+        1.187,
+        1.446,
+        1.504,
+        1.429,
+        1.286,
+        1.295,
+        1.279,
+        1.127,
+        0.769,
+        0.644,
+        0.587,
+        0.544,
+        0.475,
+        0.417,
+        0.364
+      ]
+    }
+  },
+  "lecture_dominance_analysis": {
+    "unit_note": "observations are building-days, not consumers",
+    "pct_of_cluster1_that_is_Lecture": 98.86,
+    "pct_of_Lecture_days_in_cluster1": 99.89,
+    "cluster0_building_composition": {
+      "Girls_UPS": 1588,
+      "Academic": 1560,
+      "Facilities": 1410,
+      "Mess": 1370,
+      "Boys_UPS": 1167,
+      "Library": 1165,
+      "Boys_mains": 1133,
+      "Girls_mains": 1108,
+      "Lecture": 1
+    },
+    "cluster1_building_composition": {
+      "Lecture": 870,
+      "Library": 7,
+      "Facilities": 2,
+      "Academic": 1
+    },
+    "lecture_vs_nonLecture": {
+      "n_Lecture": 871,
+      "n_nonLecture": 10511,
+      "mean_daily_kW_Lecture": 1.148,
+      "mean_daily_kW_nonLecture": 14.695,
+      "mean_peak_kW_Lecture": 3.497,
+      "mean_peak_kW_nonLecture": 22.01,
+      "mean_night_share_Lecture": 0.0544,
+      "mean_night_share_nonLecture": 0.239,
+      "mean_load_factor_Lecture": 0.2906,
+      "mean_load_factor_nonLecture": 0.7054,
+      "hourly_profile_Lecture_kW": [
+        0.04,
+        0.04,
+        0.113,
+        0.329,
+        0.435,
+        0.451,
+        0.641,
+        1.047,
+        1.983,
+        2.796,
+        3.047,
+        2.998,
+        2.823,
+        2.35,
+        2.272,
+        2.245,
+        1.89,
+        1.069,
+        0.333,
+        0.199,
+        0.156,
+        0.143,
+        0.103,
+        0.054
+      ],
+      "hourly_profile_nonLecture_kW": [
+        14.301,
+        13.67,
+        13.02,
+        12.773,
+        12.672,
+        12.245,
+        11.266,
+        11.059,
+        12.997,
+        15.251,
+        15.898,
+        16.297,
+        16.533,
+        16.236,
+        16.206,
+        16.121,
+        15.854,
+        15.513,
+        15.768,
+        16.561,
+        16.222,
+        15.842,
+        15.432,
+        14.939
+      ]
+    },
+    "broader_behaviour_evidence": {
+      "nonLecture_days_in_cluster1": 10,
+      "nonLecture_days_in_cluster1_pct_of_cluster1": 1.14,
+      "cluster1_nonLecture_meter_counts": {
+        "Library": 7,
+        "Facilities": 2,
+        "Academic": 1
+      },
+      "Lecture_vs_nonLecture_hourly_profiles_differ": true
+    },
+    "interpretation": "Lecture-dominant: K=2 primarily separates a Lecture/low-load regime from the rest"
+  },
+  "k_sensitivity": {
+    "comparison": [
+      {
+        "K": 2,
+        "inertia": 186615.6,
+        "silhouette": 0.6624,
+        "cluster_sizes": {
+          "0": 10502,
+          "1": 880
+        },
+        "smallest_cluster_pct": 7.73
+      },
+      {
+        "K": 3,
+        "inertia": 89869.1,
+        "silhouette": 0.4795,
+        "cluster_sizes": {
+          "0": 5551,
+          "1": 4961,
+          "2": 870
+        },
+        "smallest_cluster_pct": 7.64
+      },
+      {
+        "K": 4,
+        "inertia": 70060.4,
+        "silhouette": 0.4036,
+        "cluster_sizes": {
+          "0": 870,
+          "1": 3881,
+          "2": 4758,
+          "3": 1873
+        },
+        "smallest_cluster_pct": 7.64
+      }
+    ],
+    "crosstab_vs_official": {
+      "3": {
+        "official_cluster_0": {
+          "K3_cluster_0": 5541,
+          "K3_cluster_1": 4961,
+          "K3_cluster_2": 0
+        },
+        "official_cluster_1": {
+          "K3_cluster_0": 10,
+          "K3_cluster_1": 0,
+          "K3_cluster_2": 870
+        }
+      },
+      "4": {
+        "official_cluster_0": {
+          "K4_cluster_0": 0,
+          "K4_cluster_1": 3881,
+          "K4_cluster_2": 4748,
+          "K4_cluster_3": 1873
+        },
+        "official_cluster_1": {
+          "K4_cluster_0": 870,
+          "K4_cluster_1": 0,
+          "K4_cluster_2": 10,
+          "K4_cluster_3": 0
+        }
+      }
+    },
+    "sub_profiles": {
+      "3": {
+        "0": {
+          "n": 5551,
+          "mean_daily_kW": 8.069,
+          "mean_peak_kW": 11.397,
+          "mean_base_kW": 5.946,
+          "mean_load_factor": 0.7316,
+          "mean_night_share": 0.2579,
+          "mean_afternoon_share": 0.2422,
+          "meter_top3": {
+            "Girls_UPS": 1588,
+            "Girls_mains": 1106,
+            "Library": 982
+          },
+          "mean_hourly_profile_kW": [
+            8.921,
+            8.645,
+            8.322,
+            8.098,
+            7.907,
+            7.497,
+            6.582,
+            6.139,
+            6.711,
+            7.432,
+            7.642,
+            7.775,
+            7.846,
+            7.793,
+            7.841,
+            7.997,
+            7.959,
+            8.051,
+            8.505,
+            9.207,
+            9.225,
+            9.131,
+            9.229,
+            9.203
+          ]
+        },
+        "1": {
+          "n": 4961,
+          "mean_daily_kW": 22.108,
+          "mean_peak_kW": 33.888,
+          "mean_base_kW": 14.839,
+          "mean_load_factor": 0.676,
+          "mean_night_share": 0.2179,
+          "mean_afternoon_share": 0.2758,
+          "meter_top3": {
+            "Academic": 1521,
+            "Mess": 1351,
+            "Boys_mains": 810
+          },
+          "mean_hourly_profile_kW": [
+            20.317,
+            19.289,
+            18.274,
+            18.002,
+            18.001,
+            17.555,
+            16.504,
+            16.562,
+            20.03,
+            23.998,
+            25.135,
+            25.833,
+            26.253,
+            25.683,
+            25.566,
+            25.211,
+            24.688,
+            23.863,
+            23.901,
+            24.796,
+            24.057,
+            23.359,
+            22.374,
+            21.351
+          ]
+        },
+        "2": {
+          "n": 870,
+          "mean_daily_kW": 1.133,
+          "mean_peak_kW": 3.46,
+          "mean_base_kW": 0.003,
+          "mean_load_factor": 0.2902,
+          "mean_night_share": 0.0549,
+          "mean_afternoon_share": 0.4665,
+          "meter_top3": {
+            "Lecture": 868,
+            "Academic": 1,
+            "Facilities": 1
+          },
+          "mean_hourly_profile_kW": [
+            0.048,
+            0.044,
+            0.112,
+            0.328,
+            0.434,
+            0.451,
+            0.641,
+            1.048,
+            1.981,
+            2.792,
+            3.033,
+            2.984,
+            2.808,
+            2.332,
+            2.254,
+            2.229,
+            1.874,
+            1.045,
+            0.279,
+            0.133,
+            0.099,
+            0.076,
+            0.076,
+            0.077
+          ]
+        }
+      },
+      "4": {
+        "0": {
+          "n": 870,
+          "mean_daily_kW": 1.133,
+          "mean_peak_kW": 3.46,
+          "mean_base_kW": 0.003,
+          "mean_load_factor": 0.2902,
+          "mean_night_share": 0.0549,
+          "mean_afternoon_share": 0.4665,
+          "meter_top3": {
+            "Lecture": 868,
+            "Academic": 1,
+            "Facilities": 1
+          },
+          "mean_hourly_profile_kW": [
+            0.048,
+            0.044,
+            0.112,
+            0.328,
+            0.434,
+            0.451,
+            0.641,
+            1.048,
+            1.981,
+            2.792,
+            3.033,
+            2.984,
+            2.808,
+            2.332,
+            2.254,
+            2.229,
+            1.874,
+            1.045,
+            0.279,
+            0.133,
+            0.099,
+            0.076,
+            0.076,
+            0.077
+          ]
+        },
+        "1": {
+          "n": 3881,
+          "mean_daily_kW": 16.451,
+          "mean_peak_kW": 24.674,
+          "mean_base_kW": 11.932,
+          "mean_load_factor": 0.696,
+          "mean_night_share": 0.2444,
+          "mean_afternoon_share": 0.2452,
+          "meter_top3": {
+            "Boys_mains": 905,
+            "Boys_UPS": 829,
+            "Mess": 789
+          },
+          "mean_hourly_profile_kW": [
+            17.89,
+            17.183,
+            16.278,
+            15.594,
+            15.254,
+            14.694,
+            13.628,
+            12.608,
+            13.714,
+            15.22,
+            15.412,
+            15.852,
+            16.201,
+            15.88,
+            15.746,
+            15.674,
+            15.687,
+            16.403,
+            18.44,
+            20.286,
+            20.041,
+            19.499,
+            19.079,
+            18.571
+          ]
+        },
+        "2": {
+          "n": 4758,
+          "mean_daily_kW": 7.409,
+          "mean_peak_kW": 10.385,
+          "mean_base_kW": 5.469,
+          "mean_load_factor": 0.733,
+          "mean_night_share": 0.2576,
+          "mean_afternoon_share": 0.2428,
+          "meter_top3": {
+            "Girls_UPS": 1580,
+            "Girls_mains": 1095,
+            "Library": 901
+          },
+          "mean_hourly_profile_kW": [
+            8.141,
+            7.86,
+            7.567,
+            7.398,
+            7.228,
+            6.859,
+            6.026,
+            5.628,
+            6.178,
+            6.865,
+            7.072,
+            7.187,
+            7.248,
+            7.22,
+            7.275,
+            7.42,
+            7.391,
+            7.449,
+            7.818,
+            8.391,
+            8.407,
+            8.339,
+            8.436,
+            8.401
+          ]
+        },
+        "3": {
+          "n": 1873,
+          "mean_daily_kW": 29.564,
+          "mean_peak_kW": 46.03,
+          "mean_base_kW": 18.31,
+          "mean_load_factor": 0.6545,
+          "mean_night_share": 0.1805,
+          "mean_afternoon_share": 0.3235,
+          "meter_top3": {
+            "Academic": 1173,
+            "Mess": 580,
+            "Boys_mains": 94
+          },
+          "mean_hourly_profile_kW": [
+            22.5,
+            21.141,
+            20.114,
+            20.576,
+            21.146,
+            20.846,
+            19.677,
+            21.64,
+            28.832,
+            36.616,
+            39.323,
+            40.362,
+            40.806,
+            39.879,
+            39.847,
+            39.151,
+            37.697,
+            34.155,
+            30.443,
+            29.615,
+            28.177,
+            27.347,
+            25.652,
+            24.005
+          ]
+        }
+      }
+    },
+    "note": "sensitivity analysis only; K=2 remains the official model; K=3/K=4 not promoted because their silhouette is materially lower and no diagnostic favours them"
+  },
+  "semantic_labels": {
+    "0": "Continuous / Round-the-Clock Load",
+    "1": "Peak-Oriented / Low Load Factor"
+  },
+  "semantic_label_rationale": {
+    "0": "night share 0.24 ~= the 0.25 uniform-profile expectation with no dominant period (day/night ratio 1.16) -> load runs continuously; not a nocturnal peak",
+    "1": "median load factor 0.31 with base/peak 0.00 (peaky shape, within-day peak/average 3.18)"
+  },
+  "potential_anomalies": {
+    "method": "union of distance >= 99th percentile and distance >= median + 6 * 1.4826 * MAD (both reported in the CSV)",
+    "n_flagged": 114,
+    "pct_flagged": 1.0,
+    "by_meter": {
+      "Academic": 63,
+      "Library": 28,
+      "Lecture": 20,
+      "Facilities": 3
+    },
+    "interpretation": "potentially anomalous energy-behaviour observations; not confirmed equipment faults"
+  },
+  "engineering_recommendations": [
+    {
+      "cluster": 0,
+      "semantic_label": "Continuous / Round-the-Clock Load",
+      "observed_behaviour": "continuous round-the-clock load (night share 0.24 ~= uniform-profile 0.25; median base 8.94 kW; day/night ratio 1.16); high within-day shape variability (median peak/average ratio 1.41)",
+      "evidence": "median daily_mean_kW=12.23, daily_peak_kW=17.34, base_kW=8.94, load_factor=0.71, night_share=0.24, peak_hour=19:00, within-day peak/average 1.41",
+      "likely_operational_characteristic": "statistical description of measured building-day behaviour; operational cause requires site verification",
+      "targeted_optimization_strategy": "standby / base-load reduction programme: audit after-hours equipment, HVAC schedules and lighting left on overnight; investigate intermittent loads; sub-metering or logging campaign to localise the variability"
+    },
+    {
+      "cluster": 1,
+      "semantic_label": "Peak-Oriented / Low Load Factor",
+      "observed_behaviour": "peaky profile (median load factor 0.31, base/peak 0.00, peak around 10:00); daytime-concentrated usage (day/night ratio 5.93, peak ~10:00); high within-day shape variability (median peak/average ratio 3.18)",
+      "evidence": "median daily_mean_kW=1.22, daily_peak_kW=4.17, base_kW=0.00, load_factor=0.31, night_share=0.00, peak_hour=10:00, within-day peak/average 3.18",
+      "likely_operational_characteristic": "statistical description of measured building-day behaviour; operational cause requires site verification",
+      "targeted_optimization_strategy": "load shifting / scheduling of deferrable loads away from the observed peak window; demand-capacity review; operational scheduling: align equipment timetables with occupancy; avoid pre-cooling/heating outside use hours; investigate intermittent loads; sub-metering or logging campaign to localise the variability"
+    }
+  ],
+  "validation_caveats": [
+    "Observation unit is BUILDING-DAY; clusters are groupings of building-days, not of consumers.",
+    "K-Means + PCA describe statistical structure; no causal claim is made anywhere.",
+    "Silhouette favours the coarse K=2 split; K=3/K=4 give richer subdivision but materially lower silhouette (sensitivity only, official model unchanged).",
+    "The 880-day cluster is small (7.7%); its profile statistics carry more sampling uncertainty than the 10,502-day cluster.",
+    "Potential anomalies (Part G) are flagged by distance only (99th percentile and/or median+6 MAD); they are NOT confirmed equipment faults.",
+    "No tariff/cost data -> no monetary savings claims.",
+    "Lecture dominance is diagnostic: K=2 partly mirrors the Lecture/non-Lecture split; see lecture_dominance.json for exact numbers.",
+    "Semantics (Part F) assigned from measured medians only, after Parts A-E; original numeric cluster IDs kept in all datasets."
+  ],
+  "figures": [
+    "cluster_0_profiles_by_meter.png",
+    "cluster_1_profiles_by_meter.png",
+    "cluster_period_shares.png",
+    "cluster_temporal_profiles.png",
+    "clusters_pca.png",
+    "k_sensitivity_comparison.png",
+    "potential_anomaly_distances.png"
+  ]
+}

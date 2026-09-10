@@ -1,0 +1,237 @@
+{
+  "stage": "SPANDA Stage 3e - cross-meter validation of the Academic Aug-Oct 2017 regime (read-only; final analytical stage)",
+  "target_episodes": [
+    {
+      "episode_id": "EP01",
+      "start_date": "2017-07-31",
+      "end_date": "2017-08-04"
+    },
+    {
+      "episode_id": "EP02",
+      "start_date": "2017-08-21",
+      "end_date": "2017-08-25"
+    },
+    {
+      "episode_id": "EP03",
+      "start_date": "2017-08-28",
+      "end_date": "2017-09-01"
+    },
+    {
+      "episode_id": "EP04",
+      "start_date": "2017-09-04",
+      "end_date": "2017-09-08"
+    },
+    {
+      "episode_id": "EP05",
+      "start_date": "2017-09-18",
+      "end_date": "2017-09-22"
+    },
+    {
+      "episode_id": "EP06",
+      "start_date": "2017-09-25",
+      "end_date": "2017-09-29"
+    },
+    {
+      "episode_id": "EP07",
+      "start_date": "2017-10-09",
+      "end_date": "2017-10-13"
+    }
+  ],
+  "episode_notes": [
+    {
+      "episode_id": "EP01",
+      "note": "Academic's episode-level magnitude is near its own clean baseline (mean_load_ratio 1.081); its Stage-3d flags for these dates stem from shape descriptors, while Lecture, Library showed contemporaneous elevation"
+    }
+  ],
+  "n_target_dates": 35,
+  "meters_analyzed": [
+    "Academic",
+    "Boys_UPS",
+    "Boys_mains",
+    "Facilities",
+    "Girls_UPS",
+    "Girls_mains",
+    "Lecture",
+    "Library",
+    "Mess"
+  ],
+  "documented_thresholds": {
+    "elevated_load": "mean_load_ratio >= 1.2",
+    "reduced_load": "mean_load_ratio <= 0.8",
+    "undefined_ratio": "baseline <= 0.05 kW -> absolute base-difference rule (+/- 1 kW)",
+    "substantial_peak": "peak_ratio >= 1.3",
+    "substantial_shape": "shape_distance (rel. L2) >= 0.3",
+    "changed_meter": "elevated_load OR substantial peak OR substantial shape",
+    "broadly_synchronized": "changed_fraction >= 0.67 (non-Academic meters, per episode)",
+    "partially_synchronized": "0.33 <= changed_fraction < 0.67",
+    "building_specific": "changed_fraction < 0.33",
+    "daily_multi_meter_sync": ">= 2 non-Academic meters elevated on the same date"
+  },
+  "episode_classification": {
+    "EP01": {
+      "episode_id": "EP01",
+      "start_date": "2017-07-31",
+      "end_date": "2017-08-04",
+      "academic_changed": false,
+      "academic_interpretation": "near own baseline",
+      "academic_mean_load_ratio": 1.081,
+      "valid_nonacademic_meters": 6,
+      "changed_nonacademic_meters": 2,
+      "changed_fraction": 0.333,
+      "classification": "PARTIALLY SYNCHRONIZED"
+    },
+    "EP02": {
+      "episode_id": "EP02",
+      "start_date": "2017-08-21",
+      "end_date": "2017-08-25",
+      "academic_changed": true,
+      "academic_interpretation": "elevated load (ratio 1.304); elevated peak (ratio 1.397)",
+      "academic_mean_load_ratio": 1.304,
+      "valid_nonacademic_meters": 8,
+      "changed_nonacademic_meters": 0,
+      "changed_fraction": 0.0,
+      "classification": "BUILDING-SPECIFIC SIGNAL"
+    },
+    "EP03": {
+      "episode_id": "EP03",
+      "start_date": "2017-08-28",
+      "end_date": "2017-09-01",
+      "academic_changed": true,
+      "academic_interpretation": "elevated peak (ratio 1.334)",
+      "academic_mean_load_ratio": 1.19,
+      "valid_nonacademic_meters": 8,
+      "changed_nonacademic_meters": 0,
+      "changed_fraction": 0.0,
+      "classification": "BUILDING-SPECIFIC SIGNAL"
+    },
+    "EP04": {
+      "episode_id": "EP04",
+      "start_date": "2017-09-04",
+      "end_date": "2017-09-08",
+      "academic_changed": true,
+      "academic_interpretation": "elevated load (ratio 1.309); elevated peak (ratio 1.38)",
+      "academic_mean_load_ratio": 1.309,
+      "valid_nonacademic_meters": 8,
+      "changed_nonacademic_meters": 0,
+      "changed_fraction": 0.0,
+      "classification": "BUILDING-SPECIFIC SIGNAL"
+    },
+    "EP05": {
+      "episode_id": "EP05",
+      "start_date": "2017-09-18",
+      "end_date": "2017-09-22",
+      "academic_changed": true,
+      "academic_interpretation": "elevated load (ratio 1.363); elevated peak (ratio 1.429)",
+      "academic_mean_load_ratio": 1.363,
+      "valid_nonacademic_meters": 8,
+      "changed_nonacademic_meters": 0,
+      "changed_fraction": 0.0,
+      "classification": "BUILDING-SPECIFIC SIGNAL"
+    },
+    "EP06": {
+      "episode_id": "EP06",
+      "start_date": "2017-09-25",
+      "end_date": "2017-09-29",
+      "academic_changed": true,
+      "academic_interpretation": "elevated load (ratio 1.396); elevated peak (ratio 1.498)",
+      "academic_mean_load_ratio": 1.396,
+      "valid_nonacademic_meters": 8,
+      "changed_nonacademic_meters": 0,
+      "changed_fraction": 0.0,
+      "classification": "BUILDING-SPECIFIC SIGNAL"
+    },
+    "EP07": {
+      "episode_id": "EP07",
+      "start_date": "2017-10-09",
+      "end_date": "2017-10-13",
+      "academic_changed": true,
+      "academic_interpretation": "elevated load (ratio 1.539); elevated peak (ratio 1.835)",
+      "academic_mean_load_ratio": 1.539,
+      "valid_nonacademic_meters": 8,
+      "changed_nonacademic_meters": 5,
+      "changed_fraction": 0.625,
+      "classification": "PARTIALLY SYNCHRONIZED"
+    }
+  },
+  "classification_counts": {
+    "BUILDING-SPECIFIC SIGNAL": 5,
+    "PARTIALLY SYNCHRONIZED": 2
+  },
+  "daily_synchronization": {
+    "n_dates_multi_meter_sync": 4,
+    "n_dates_academic_elevated": 28,
+    "mean_elevated_fraction": 0.142,
+    "n_dates_with_notes": 0
+  },
+  "monthly_context_academic_2017": [
+    {
+      "month": "2017-08",
+      "valid_days": 26,
+      "mean_daily_kW": 40.228,
+      "baseline_mean_daily_kW": 29.366,
+      "mean_load_ratio_vs_baseline": 1.37
+    },
+    {
+      "month": "2017-09",
+      "valid_days": 28,
+      "mean_daily_kW": 38.259,
+      "baseline_mean_daily_kW": 29.366,
+      "mean_load_ratio_vs_baseline": 1.303
+    },
+    {
+      "month": "2017-10",
+      "valid_days": 31,
+      "mean_daily_kW": 33.285,
+      "baseline_mean_daily_kW": 29.366,
+      "mean_load_ratio_vs_baseline": 1.133
+    }
+  ],
+  "monthly_context_max_ratio_other_meters": {
+    "2017-08": 1.577,
+    "2017-09": 1.614,
+    "2017-10": 1.435
+  },
+  "answers": {
+    "q1_episodes_in_other_meters": "see episode_classification[].changed_nonacademic_meters per episode",
+    "q2_contemporaneous_meters": {
+      "Library": 2,
+      "Boys_UPS": 1,
+      "Boys_mains": 1,
+      "Girls_mains": 1,
+      "Lecture": 1,
+      "Mess": 1
+    },
+    "q3_multi_meter_sync_dates": 4,
+    "q4_regime_class": "BUILDING-SPECIFIC SIGNAL",
+    "q5_academic_distinct_regime": "Academic Aug/Sep/Oct 2017 mean-load ratios vs the rest of 2017: [1.37, 1.303, 1.133]",
+    "q6_evidence": [
+      "per-meter, per-episode ratios vs same-meter 7+7-day baselines (crossmeter_episode_summary.csv)",
+      "daily synchronization across 35 target dates (crossmeter_daily_sync.csv)",
+      "monthly Aug-Oct 2017 vs non-regime 2017 baseline (crossmeter_monthly_2017.csv)"
+    ],
+    "q7_missing_evidence": [
+      "no authoritative campus operational calendar, activity log, or equipment-register data",
+      "no weather data to test weather-driven demand",
+      "no sub-meter breakdown inside the Academic building",
+      "no meter-metadata change log (CT ratios, calibration, logging configuration)"
+    ],
+    "q8_claims_not_permitted": [
+      "no causality (weather, events, holidays, exams, faults, theft)",
+      "no confirmed equipment failure or malfunction",
+      "no campus-wide event claim from association alone",
+      "no monetary quantification (no tariff data)"
+    ]
+  },
+  "final_interpretation": "The observed Aug-Oct 2017 regime appears predominantly localized to the Academic meter and should be investigated through building-level operational records, equipment schedules, or sub-metering.",
+  "scientific_statement": "Observed association: Academic's Aug-Oct 2017 anomaly regime coincides with [see q4] contemporaneous deviations in other meters. Contextual evidence: same-meter baselines, daily synchronization, and monthly 2017 context. Required next step: engineering/operational investigation - the energy data alone does not convert association into causation.",
+  "official_model": "K=2, random_state=42, n_init=10 - UNTOUCHED",
+  "outputs": [
+    "crossmeter_episode_summary.csv",
+    "crossmeter_daily_sync.csv",
+    "crossmeter_monthly_2017.csv",
+    "crossmeter_validation_report.json",
+    "crossmeter_episode_heatmap.png",
+    "crossmeter_daily_synchronization.png",
+    "academic_2017_vs_other_meters.png"
+  ]
+}

@@ -1,0 +1,487 @@
+{
+  "stage": "SPANDA Stage 3d - potential anomaly context & calendar validation (read-only screening)",
+  "observation_unit": "building-day (building meter x day)",
+  "notable_findings": [
+    {
+      "finding": "Academic has 7 weekday-packed anomaly episodes (5-day Monday-Friday blocks with weekend gaps): 2017-07-31 to 2017-08-04, 2017-08-21 to 2017-08-25, 2017-08-28 to 2017-09-01, 2017-09-04 to 2017-09-08, 2017-09-18 to 2017-09-22, 2017-09-25 to 2017-09-29, 2017-10-09 to 2017-10-13",
+      "evidence": "episodes span consecutive Mon-Fri dates only; all in cluster 0; tags dominated by ['SHAPE_SHIFT', 'PERSISTENT_EPISODE', 'HIGH_PEAK']",
+      "interpretation": "a sustained, calendar-aligned weekday-only operational-behaviour change during this period; screening evidence for an operational review, NOT a fault finding"
+    }
+  ],
+  "n_potential_anomalies": 114,
+  "source_of_flags": "spanda_out/modelling/potential_anomalies.csv (Stage 3b; thresholds 99th pct = 8.07 and median+6x1.4826xMAD = 13.93; NOT recalculated)",
+  "weekday_weekend": {
+    "anomalies_weekday": 79,
+    "anomalies_weekend": 35,
+    "anomalies_weekday_pct": 69.3,
+    "anomalies_weekend_pct": 30.7,
+    "full_dataset_weekend_pct": 27.79,
+    "full_dataset_weekday_pct": 72.21,
+    "note": "weekend anomalies are NOT auto-labelled explainable; a weekend can still carry unusual energy behaviour"
+  },
+  "anomaly_rate_by_meter": [
+    {
+      "meter": "Academic",
+      "total_modelling_days": 1561,
+      "anomaly_days": 63,
+      "anomaly_rate_pct": 4.04,
+      "mean_anomaly_distance": 8.568,
+      "max_anomaly_distance": 9.628
+    },
+    {
+      "meter": "Facilities",
+      "total_modelling_days": 1412,
+      "anomaly_days": 3,
+      "anomaly_rate_pct": 0.21,
+      "mean_anomaly_distance": 9.544,
+      "max_anomaly_distance": 10.057
+    },
+    {
+      "meter": "Lecture",
+      "total_modelling_days": 871,
+      "anomaly_days": 20,
+      "anomaly_rate_pct": 2.3,
+      "mean_anomaly_distance": 9.597,
+      "max_anomaly_distance": 10.674
+    },
+    {
+      "meter": "Library",
+      "total_modelling_days": 1172,
+      "anomaly_days": 28,
+      "anomaly_rate_pct": 2.39,
+      "mean_anomaly_distance": 8.708,
+      "max_anomaly_distance": 9.729
+    }
+  ],
+  "concentration": {
+    "by_year": [
+      {
+        "year": 2013,
+        "anomaly_count": 5
+      },
+      {
+        "year": 2014,
+        "anomaly_count": 13
+      },
+      {
+        "year": 2015,
+        "anomaly_count": 5
+      },
+      {
+        "year": 2016,
+        "anomaly_count": 18
+      },
+      {
+        "year": 2017,
+        "anomaly_count": 73
+      }
+    ],
+    "by_year_month": [
+      {
+        "year_month": "2013-08",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2013-09",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2013-10",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2013-11",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2013-12",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2014-02",
+        "anomaly_count": 2
+      },
+      {
+        "year_month": "2014-04",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2014-05",
+        "anomaly_count": 4
+      },
+      {
+        "year_month": "2014-06",
+        "anomaly_count": 3
+      },
+      {
+        "year_month": "2014-07",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2014-08",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2014-10",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2015-02",
+        "anomaly_count": 2
+      },
+      {
+        "year_month": "2015-03",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2015-11",
+        "anomaly_count": 2
+      },
+      {
+        "year_month": "2016-02",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2016-03",
+        "anomaly_count": 5
+      },
+      {
+        "year_month": "2016-05",
+        "anomaly_count": 2
+      },
+      {
+        "year_month": "2016-06",
+        "anomaly_count": 3
+      },
+      {
+        "year_month": "2016-07",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2016-09",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2016-10",
+        "anomaly_count": 4
+      },
+      {
+        "year_month": "2016-11",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2017-03",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2017-04",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2017-05",
+        "anomaly_count": 1
+      },
+      {
+        "year_month": "2017-06",
+        "anomaly_count": 8
+      },
+      {
+        "year_month": "2017-07",
+        "anomaly_count": 6
+      },
+      {
+        "year_month": "2017-08",
+        "anomaly_count": 20
+      },
+      {
+        "year_month": "2017-09",
+        "anomaly_count": 19
+      },
+      {
+        "year_month": "2017-10",
+        "anomaly_count": 14
+      },
+      {
+        "year_month": "2017-11",
+        "anomaly_count": 3
+      }
+    ],
+    "by_day_name": [
+      {
+        "day_name": "Friday",
+        "anomaly_count": 17
+      },
+      {
+        "day_name": "Monday",
+        "anomaly_count": 16
+      },
+      {
+        "day_name": "Saturday",
+        "anomaly_count": 9
+      },
+      {
+        "day_name": "Sunday",
+        "anomaly_count": 26
+      },
+      {
+        "day_name": "Thursday",
+        "anomaly_count": 18
+      },
+      {
+        "day_name": "Tuesday",
+        "anomaly_count": 12
+      },
+      {
+        "day_name": "Wednesday",
+        "anomaly_count": 16
+      }
+    ],
+    "by_cluster": [
+      {
+        "cluster": 0,
+        "anomaly_count": 88
+      },
+      {
+        "cluster": 1,
+        "anomaly_count": 26
+      }
+    ],
+    "by_meter": [
+      {
+        "meter": "Academic",
+        "anomaly_count": 63,
+        "anomaly_percentage": 55.26
+      },
+      {
+        "meter": "Library",
+        "anomaly_count": 28,
+        "anomaly_percentage": 24.56
+      },
+      {
+        "meter": "Lecture",
+        "anomaly_count": 20,
+        "anomaly_percentage": 17.54
+      },
+      {
+        "meter": "Facilities",
+        "anomaly_count": 3,
+        "anomaly_percentage": 2.63
+      }
+    ]
+  },
+  "episodes": {
+    "n_episodes": 70,
+    "n_isolated_single_day": 50,
+    "n_multi_day": 20,
+    "longest": [
+      {
+        "episode_id": "Academic-EP10",
+        "start_date": "2017-07-31",
+        "end_date": "2017-08-04",
+        "duration_days": 5,
+        "number_of_flagged_days": 5
+      },
+      {
+        "episode_id": "Academic-EP14",
+        "start_date": "2017-08-21",
+        "end_date": "2017-08-25",
+        "duration_days": 5,
+        "number_of_flagged_days": 5
+      },
+      {
+        "episode_id": "Academic-EP15",
+        "start_date": "2017-08-28",
+        "end_date": "2017-09-01",
+        "duration_days": 5,
+        "number_of_flagged_days": 5
+      },
+      {
+        "episode_id": "Academic-EP16",
+        "start_date": "2017-09-04",
+        "end_date": "2017-09-08",
+        "duration_days": 5,
+        "number_of_flagged_days": 5
+      },
+      {
+        "episode_id": "Academic-EP19",
+        "start_date": "2017-09-18",
+        "end_date": "2017-09-22",
+        "duration_days": 5,
+        "number_of_flagged_days": 5
+      }
+    ]
+  },
+  "dominant_behaviour_tags": {
+    "SHAPE_SHIFT": 105,
+    "PERSISTENT_EPISODE": 64,
+    "PEAK_HOUR_SHIFT": 61,
+    "ISOLATED": 50,
+    "HIGH_PEAK": 48,
+    "LOW_BASE": 25,
+    "LOW_LOAD_FACTOR": 14,
+    "HIGH_LOAD_FACTOR": 6
+  },
+  "interpretation_categories": {
+    "A_CALENDAR_WEEKLY_PATTERN_EXPLAINABLE": 34,
+    "B_UNUSUAL_BUT_PLAUSIBLE": 17,
+    "C_POTENTIALLY_UNEXPLAINED_ENERGY_AUDIT_CANDIDATE": 63,
+    "note": "C means candidate for further investigation, NOT confirmed equipment failure"
+  },
+  "strongest_audit_candidates_top10": [
+    {
+      "meter": "Lecture",
+      "obs_date": "2015-02-14",
+      "anomaly_distance": 10.67,
+      "tags": "HIGH_PEAK|HIGH_LOAD_FACTOR|PEAK_HOUR_SHIFT|SHAPE_SHIFT|ISOLATED",
+      "reason": "mean load 9.40x nearby same-meter median; peak 5.91x nearby median; peak hour shifted 8 h; 24-h shape deviation 16.62 (relative L1); isolated day"
+    },
+    {
+      "meter": "Facilities",
+      "obs_date": "2014-08-09",
+      "anomaly_distance": 10.06,
+      "tags": "HIGH_PEAK|PEAK_HOUR_SHIFT|SHAPE_SHIFT|ISOLATED",
+      "reason": "mean load 9.07x nearby same-meter median; peak 10.27x nearby median; peak hour shifted 5 h; 24-h shape deviation 8.25 (relative L1); isolated day"
+    },
+    {
+      "meter": "Facilities",
+      "obs_date": "2015-02-20",
+      "anomaly_distance": 9.99,
+      "tags": "LOW_BASE|LOW_LOAD_FACTOR|PEAK_HOUR_SHIFT|SHAPE_SHIFT|ISOLATED",
+      "reason": "mean load 0.50x nearby same-meter median; near-zero base load vs nearby days; peak hour shifted 7 h; 24-h shape deviation 0.50 (relative L1); isolated day"
+    },
+    {
+      "meter": "Lecture",
+      "obs_date": "2017-06-28",
+      "anomaly_distance": 9.95,
+      "tags": "PEAK_HOUR_SHIFT|SHAPE_SHIFT|ISOLATED",
+      "reason": "mean load 0.59x nearby same-meter median; peak hour shifted 10 h; 24-h shape deviation 1.63 (relative L1); isolated day"
+    },
+    {
+      "meter": "Lecture",
+      "obs_date": "2014-02-13",
+      "anomaly_distance": 9.75,
+      "tags": "HIGH_LOAD_FACTOR|PEAK_HOUR_SHIFT|SHAPE_SHIFT|PERSISTENT_EPISODE",
+      "reason": "peak hour shifted 10 h; 24-h shape deviation 2.79 (relative L1); 2-day episode"
+    },
+    {
+      "meter": "Lecture",
+      "obs_date": "2017-11-27",
+      "anomaly_distance": 9.73,
+      "tags": "LOW_LOAD_FACTOR|SHAPE_SHIFT|PERSISTENT_EPISODE",
+      "reason": "mean load 0.49x nearby same-meter median; 24-h shape deviation 0.60 (relative L1); 3-day episode"
+    },
+    {
+      "meter": "Lecture",
+      "obs_date": "2017-06-26",
+      "anomaly_distance": 9.72,
+      "tags": "PEAK_HOUR_SHIFT|SHAPE_SHIFT|PERSISTENT_EPISODE",
+      "reason": "mean load 0.67x nearby same-meter median; peak hour shifted 7 h; 24-h shape deviation 1.70 (relative L1); 2-day episode"
+    },
+    {
+      "meter": "Lecture",
+      "obs_date": "2017-11-28",
+      "anomaly_distance": 9.63,
+      "tags": "LOW_LOAD_FACTOR|PEAK_HOUR_SHIFT|SHAPE_SHIFT|PERSISTENT_EPISODE",
+      "reason": "mean load 0.19x nearby same-meter median; peak hour shifted 4 h; 24-h shape deviation 0.90 (relative L1); 3-day episode"
+    },
+    {
+      "meter": "Lecture",
+      "obs_date": "2017-04-08",
+      "anomaly_distance": 9.59,
+      "tags": "HIGH_PEAK|PEAK_HOUR_SHIFT|SHAPE_SHIFT|ISOLATED",
+      "reason": "mean load 4.58x nearby same-meter median; peak 5.94x nearby median; peak hour shifted 7 h; 24-h shape deviation 3.60 (relative L1); isolated day"
+    },
+    {
+      "meter": "Lecture",
+      "obs_date": "2014-07-16",
+      "anomaly_distance": 9.55,
+      "tags": "LOW_LOAD_FACTOR|PEAK_HOUR_SHIFT|SHAPE_SHIFT|ISOLATED",
+      "reason": "mean load 0.00x nearby same-meter median; peak hour shifted 10 h; 24-h shape deviation 1.00 (relative L1); isolated day"
+    }
+  ],
+  "documented_thresholds": {
+    "HIGH_PEAK": "peak_ratio >= 1.5",
+    "HIGH_BASE": "base_ratio >= 1.5, or nearby median base <= 0.05 kW and anomaly base >= 1.0 kW",
+    "LOW_BASE": "base_ratio <= 0.5, or nearby median base >= 0.5 kW and anomaly base <= 0.05 kW",
+    "LOW_LOAD_FACTOR": "lf_ratio <= 0.7",
+    "HIGH_LOAD_FACTOR": "lf_ratio >= 1.3",
+    "PEAK_HOUR_SHIFT": "circular diff >= 3.0 h",
+    "SHAPE_SHIFT": "relative L1 >= 0.35 (strong: >= 0.5)",
+    "neighbours": "up to 7 previous + 7 next non-anomalous days of the SAME meter"
+  },
+  "engineering_interpretation": {
+    "HIGH_BASE / elevated overnight base": [
+      "after-hours equipment audit",
+      "standby-load review",
+      "HVAC/lighting scheduling review"
+    ],
+    "HIGH_PEAK": [
+      "investigate simultaneous high-load operation",
+      "review demand management",
+      "inspect operating schedules"
+    ],
+    "SHAPE_SHIFT / PEAK_HOUR_SHIFT": [
+      "inspect changed operating schedule",
+      "identify temporary/deferrable loads",
+      "consider additional sub-metering"
+    ],
+    "PERSISTENT_EPISODE": [
+      "review operational event logs",
+      "compare with known campus activities",
+      "investigate sustained load changes"
+    ]
+  },
+  "answers": {
+    "q1_weekday_vs_weekend": "79 weekday vs 35 weekend anomalies (full dataset: 27.79% weekend)",
+    "q2_highest_anomaly_rate_meters": [
+      {
+        "meter": "Academic",
+        "anomaly_rate_pct": 4.04
+      },
+      {
+        "meter": "Library",
+        "anomaly_rate_pct": 2.39
+      },
+      {
+        "meter": "Lecture",
+        "anomaly_rate_pct": 2.3
+      }
+    ],
+    "q3_isolated_or_episodes": "50 isolated days, 20 multi-day episodes",
+    "q4_month_year_concentration": "see concentration.by_year_month (top months: [{'year_month': '2017-08', 'anomaly_count': 20}, {'year_month': '2017-09', 'anomaly_count': 19}, {'year_month': '2017-10', 'anomaly_count': 14}])",
+    "q5_dominant_behaviour_types": {
+      "SHAPE_SHIFT": 105,
+      "PERSISTENT_EPISODE": 64,
+      "PEAK_HOUR_SHIFT": 61,
+      "ISOLATED": 50,
+      "HIGH_PEAK": 48
+    },
+    "q6_category_counts": {
+      "A": 34,
+      "B": 17,
+      "C": 63
+    },
+    "q7_strongest_candidates": "see strongest_audit_candidates_top10",
+    "q8_limitations": [
+      "Calendar interpretation is limited because an authoritative institutional academic/holiday calendar has not been integrated into this stage.",
+      "No tariff/cost data -> no monetary quantification.",
+      "Neighbour comparison uses up to 14 nearby same-meter days; during long outages the window can span very different seasons.",
+      "Categories are screening judgements from measured evidence, not diagnoses."
+    ]
+  },
+  "mandated_statements": [
+    "The anomaly analysis identifies potentially unusual building-day energy behaviour. It does not establish equipment faults, failures, causality, or energy theft.",
+    "Calendar interpretation is limited because an authoritative institutional academic/holiday calendar has not been integrated into this stage."
+  ],
+  "official_model": "K=2, random_state=42, n_init=10 - UNCHANGED",
+  "outputs": [
+    "anomaly_context.csv",
+    "anomaly_summary_by_meter.csv",
+    "anomaly_summary_by_category.csv",
+    "anomaly_episodes.csv",
+    "anomaly_calendar_distribution.png",
+    "anomaly_rate_by_meter.png",
+    "anomaly_episode_lengths.png",
+    "anomaly_context_comparison.png"
+  ]
+}

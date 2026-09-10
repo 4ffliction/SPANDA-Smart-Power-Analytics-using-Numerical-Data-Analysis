@@ -1,0 +1,137 @@
+{
+  "stage": "SPANDA Stage 3c - cluster stability validation (read-only)",
+  "observation_unit": "building-day",
+  "design": {
+    "seeds": [
+      0,
+      7,
+      21,
+      42,
+      100,
+      123,
+      999,
+      2026
+    ],
+    "K_values": [
+      2,
+      3,
+      4
+    ],
+    "n_init": 10,
+    "init": "k-means++",
+    "reference_seed": 42,
+    "varies": "K-Means initialization/fit ONLY",
+    "frozen": [
+      "observation unit",
+      "feature engineering",
+      "transforms",
+      "StandardScaler",
+      "PCA representation",
+      "retained PCs (3)"
+    ],
+    "pca_representation": {
+      "n_observations": 11382,
+      "retained_pcs": 3,
+      "note": "reproduces Stage-3 cumulative variance 0.9085; row alignment verified on meter + obs_date"
+    }
+  },
+  "metrics_definitions": {
+    "ARI": "sklearn.metrics.adjusted_rand_score (permutation-invariant; raw label equality never used)",
+    "centroid_consistency": "Hungarian (optimal) assignment on Euclidean centroid distance vs the seed-42 solution; supplementary only",
+    "stability_rule": "mean pairwise ARI >= 0.99 AND min pairwise ARI >= 0.95"
+  },
+  "k2_stability": {
+    "mean_pairwise_ARI": 1.0,
+    "min_pairwise_ARI": 1.0,
+    "max_pairwise_ARI": 1.0,
+    "mean_silhouette": 0.6624,
+    "std_silhouette": 0.0,
+    "smallest_cluster_pct_range": [
+      7.73,
+      7.73
+    ],
+    "stable": true,
+    "answer": "K=2 is statistically stable and reproducible across random initializations"
+  },
+  "k3_stability": {
+    "mean_pairwise_ARI": 0.9981,
+    "min_pairwise_ARI": 0.996,
+    "max_pairwise_ARI": 1.0,
+    "mean_silhouette": 0.4795,
+    "std_silhouette": 0.0,
+    "stable": true,
+    "answer": "K=3 is stable across random initializations (reproducible solution)"
+  },
+  "k4_stability": {
+    "mean_pairwise_ARI": 0.9979,
+    "min_pairwise_ARI": 0.9979,
+    "max_pairwise_ARI": 1.0,
+    "mean_silhouette": 0.4037,
+    "std_silhouette": 0.0003,
+    "stable": true,
+    "answer": "K=4 is stable across random initializations (reproducible solution)"
+  },
+  "question_4_supports_k2": {
+    "official_model": {
+      "K": 2,
+      "random_state": 42,
+      "n_init": 10
+    },
+    "k2_stable": true,
+    "k2_silhouette_leads": true,
+    "answer": "K=2 is statistically stable and reproducible across random initializations, strengthening its validity as the official clustering solution.",
+    "supports_retaining_k2": true
+  },
+  "question_5_k3_secondary_structure": {
+    "k3_stable": true,
+    "k3_mean_silhouette": 0.4795,
+    "k3_silhouette_lower_than_k2": true,
+    "k3_reference_subcluster_profile": {
+      "cluster_0": {
+        "n": 5551,
+        "mean_daily_kW": 8.069,
+        "mean_base_kW": 5.946,
+        "top_meters": {
+          "Girls_UPS": 1588,
+          "Girls_mains": 1106
+        }
+      },
+      "cluster_1": {
+        "n": 4961,
+        "mean_daily_kW": 22.108,
+        "mean_base_kW": 14.839,
+        "top_meters": {
+          "Academic": 1521,
+          "Mess": 1351
+        }
+      },
+      "cluster_2": {
+        "n": 870,
+        "mean_daily_kW": 1.133,
+        "mean_base_kW": 0.003,
+        "top_meters": {
+          "Lecture": 868,
+          "Academic": 1
+        }
+      }
+    },
+    "interpretable_substructure_detected": true,
+    "answer": "K=3 represents a stable secondary subdivision of the data with interpretable sub-structure, but its lower separation quality (silhouette) means it remains a sensitivity analysis rather than a replacement for the official K=2 model."
+  },
+  "decision": "Official model remains K=2 (random_state=42, n_init=10). This stage changes nothing; it only measures reproducibility.",
+  "caveats": [
+    "Stability here = reproducibility across K-Means initializations on one frozen representation; it does not validate the representation itself or imply causal structure.",
+    "ARI is inflation-biased toward high values for small K; the K=2/K=3/K=4 ARI values are compared within-K only.",
+    "Centroid matching distances are supplementary evidence; ARI is the primary metric.",
+    "No monetary, causal, or consumer-level claims; unit is building-day."
+  ],
+  "figures": [
+    "cluster_stability_ari.png",
+    "cluster_stability_silhouette.png",
+    "cluster_stability_comparison.png"
+  ],
+  "tables": [
+    "cluster_stability_summary.csv",
+    "cluster_stability_runs.csv"
+  ]
+}
